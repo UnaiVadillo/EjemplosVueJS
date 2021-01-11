@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos VueJs</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<h1>VUE BÁSICO</h1>
+<ol>
+    <li>
+        <b>Ejemplo de listas</b>
+        <div id="div-3" v-cloak>
+            <ul>
+                <li v-for="(dia,index,c) in semana" v-bind:key="index">
+                    {{index}} - {{dia}}
+                </li>
+            </ul>
+            <br>
+            <ul>
+                <li v-for="(dia, index, c) in semanaComplex" v-bind:key="index">
+                    {{index+1}} - {{dia.dia}} : {{dia.abrv}}
+                </li>
+            </ul>
+        </div>
+    </li>
+</ol>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.0"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

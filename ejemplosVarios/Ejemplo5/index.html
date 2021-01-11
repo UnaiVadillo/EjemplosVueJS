@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos VueJs</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<h1>VUE BÁSICO</h1>
+<ol>
+    <li>
+        <b>Ejemplo de propiedades computadas</b>
+        <div id="div-5" v-cloak>
+            <div><input type="text" v-model="mensaje"></div>
+            <div>Mensaje original.....<label v-text="mensaje"></label></div>
+            <div>Mensaje invertido.....<label v-text="reverse"></label></div>
+            <div>Mensaje mayusculas.....<label v-text="mayusculas"></label></div>
+            <div>Posición cifrado Cesar<input type="number" v-model="offsetCesar" number></div>
+            <div>Mensaje cifrado Cesar [offset Cesar: {{offsetCesar}}].....<label v-text="cifradoCesar"></label>{{encriptadoCesar}}</div>
+            <div>
+                <p>
+                    Frutas<br>
+                    <button v-on:click="orderBy('+','precio')">Asc Precio</button>
+                    <button v-on:click="orderBy('-','precio')">Desc Precio</button>
+                    <button v-on:click="orderBy('+','nombre')">Asc Nombre</button>
+                    <button v-on:click="orderBy('-','nombre')">Desc Nombre</button>
+                    <button v-on:click="orderBy('+','peso')">Asc Peso</button>
+                    <button v-on:click="orderBy('-','peso')">Desc Peso</button>
+                </p>
+                <ul>
+                    <li v-for="(value, index, c) in precioFruta" v-bind:key="index">
+                        {{index}} - {{value}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </li>
+</ol>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.0"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

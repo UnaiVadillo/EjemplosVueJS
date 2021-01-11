@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos VueJs</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<h1>VUE BÁSICO</h1>
+<ol>
+    <li>
+        <b>Ejemplo de eventos</b>
+        <div id="div-4" v-cloak>
+            <input type="text" placeholder="Tarea" v-model="newTarea" v-on:keyup.enter="addTarea">
+            <button v-on:click="addTarea">Añadir tarea</button>
+            <ul>
+                <li v-for="(tarea,index,x) in tareas" v-bind:key="index">
+                    {{index}} - {{tarea}}
+                </li>
+            </ul>
+        </div>
+    </li>
+
+</ol>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.0"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

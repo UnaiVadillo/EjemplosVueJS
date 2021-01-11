@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos VueJs</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<h1>VUE BÁSICO</h1>
+<ol>
+    <li>
+        <b>Ejemplo de transiciones</b>
+        <div id="div-9" v-cloak>
+            <button v-on:click="show">Mostar.. {{mostrar}}</button>
+            <transition name="zoom" mode="out-in">
+                <section v-if="mostrar" key="IF">IF</section>
+                <section v-else key="ELSE">ELSE</section>
+            </transition>
+
+            <transition name="fade">
+                <section v-if="mostrar">TRANSITION</section>
+            </transition>
+
+            <transition name="zoom">
+                <section v-if="mostrar">ANIMATION</section>
+            </transition>
+
+            <transition name="zoom" appear>
+                <section v-if="mostrar">APPEAR</section>
+            </transition>
+        </div>
+    </li>
+</ol>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.0"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

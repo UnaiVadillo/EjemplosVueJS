@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola Mundo Vue</title>
+</head>
+<body>
+    <div id="saludo">
+        {{ mensaje }}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const app = new Vue ({
+            el: '#saludo',
+            data: {
+            mensaje: 'Hola Mundo !'
+            }
+        })
+    </script>
+</body>
+</html>

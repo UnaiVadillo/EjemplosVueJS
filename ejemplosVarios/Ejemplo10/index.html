@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos VueJs</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<h1>VUE BÁSICO</h1>
+<ol>
+
+    <li>
+        <b>Ejemplo de AJAX Vue-resource</b>
+        <div id="div-10" v-cloak>
+            <div v-if="personas.length">
+                <img v-bind:title="person.name.first" v-bind:alt="person.name.first" v-for="(person,index,c) in personas" v-bind:src="person.picture.thumbnail" v-bind:key="index">
+            </div>
+            <div v-else class="loading">
+                <div></div>
+            </div>
+        </div>
+    </li>
+</ol>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.0"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
